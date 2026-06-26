@@ -4,10 +4,6 @@
 This project analyzes whether stock volatility changes around IPO lockup expirations(the date when insiders are first permitted to sell their shares) using daily price data from 6 companies that went public in 2025. Contrary to the supply-shock hypothesis, average volatility did not spike at day 0 but instead dipped around the lockup date and rose afterward, suggesting markets price in the expiration in advance.
 
 ## Methodology
-[how you did it - bullet points, one per script]
-
-## Methodology
-
 - `01_pull_data.py` — pulls daily OHLCV price data from Yahoo Finance for each ticker, centered around the lockup expiration date
 - `02_compute_volatility.py` — computes 5-day rolling annualized realized volatility from log returns for all 6 companies
 - `03_event_study.py` — re-indexes each stock to event time (day 0 = lockup date) and plots average volatility from day -60 to +60
